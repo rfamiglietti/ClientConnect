@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================
+   Variáveis Globais
+========================= */
+:root {
+  --card: 18, 22, 39;
+  --neon-cyan: #00ffff;
+  --neon-magenta: #ff00ff;
+  --neon-yellow: #ffcc00;
+}
+
+/* =========================
+   Background Futurista
+========================= */
+.bg-grid {
+  background-image: radial-gradient(circle, rgba(77, 255, 255, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* =========================
+   Cards Glass & Neon
+========================= */
+.card-glass {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+}
+.card-glass:hover {
+  box-shadow: 0 0 20px var(--neon-cyan);
+  transform: scale(1.03);
+}
+
+/* =========================
+   Scroll Suave
+========================= */
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   Textos Neon
+========================= */
+.text-neon-cyan {
+  color: var(--neon-cyan);
+  text-shadow: 0 0 5px var(--neon-cyan), 0 0 10px var(--neon-cyan);
+}
+.text-neon-magenta {
+  color: var(--neon-magenta);
+  text-shadow: 0 0 5px var(--neon-magenta), 0 0 10px var(--neon-magenta);
+}
+.text-neon-yellow {
+  color: var(--neon-yellow);
+  text-shadow: 0 0 5px var(--neon-yellow), 0 0 10px var(--neon-yellow);
+}
+
+/* =========================
+   Inputs Futuristas
+========================= */
+.input-glass {
+  @apply w-full p-3 rounded-xl bg-gray-700/20 backdrop-blur-sm border border-gray-600 placeholder-gray-400 outline-none transition-all;
+}
+.input-glass:focus {
+  @apply border-neon-cyan ring-2 ring-neon-cyan;
+}
+
+/* =========================
+   Botões Neon
+========================= */
+.btn-neon {
+  @apply px-4 py-2 rounded-xl bg-neon-cyan/20 text-white font-semibold flex items-center justify-center transition-all;
+}
+.btn-neon:hover {
+  @apply bg-neon-cyan/50 shadow-[0_0_15px_#00ffff] scale-105;
+}
+
+/* =========================
+   Tarefas e Lists
+========================= */
+.task-glass {
+  @apply p-3 rounded-xl bg-gray-800/20 flex justify-between items-center transition-all;
+}
+.task-glass:hover {
+  box-shadow: 0 0 15px var(--neon-cyan);
+  transform: scale(1.02);
+}
+
+/* =========================
+   Scrollbar Custom
+========================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--neon-cyan);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--neon-magenta);
+}
+
+/* =========================
+   Dark Mode
+========================= */
+.dark body {
+  background-color: #0f111a;
+  color: #ffffff;
+}
